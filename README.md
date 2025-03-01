@@ -13,11 +13,11 @@ The content letters were consistently set in Arial due to its neutral design, av
 However, this approach is not without limitations. Certain Armenian letters, such as `Հ`, exhibit significant variation in writing, similar to the lowercase `r` in English cursive. While such differences are critical in the content alphabet, they are less relevant for the style alphabet, which primarily serves to extract stylistic features.
 
 ## 📜 Table of Contents
-- [Prerequisites](#prerequisites)
-- [Dataset](#dataset)
-- [Training](#training)
-- [Results](#results)
-- [Acknowledgements](#acknowledgements)
+- [Prerequisites](#🚀-prerequisites)
+- [Dataset](#📂-dataset)
+- [Training](#🎯-training)
+- [Results](#📈-results)
+- [Acknowledgements](#🙌-acknowledgements)
 
 ## 🚀 Prerequisites
 
