@@ -79,17 +79,17 @@ The training process is designed to save key outputs for monitoring and evaluati
 ## 📈 Results
 The results are satisfactory; however, the model would benefit from further training on cleaner and more suitable data:  
 
-![training-results](/results/training.jpg "Training Results")
+![training-results](/images/training.jpg "Training Results")
 
 For unseen style font:
 
-![test-results](/results/test.jpg "Test Results")
+![test-results](/images/test.jpg "Test Results")
 
 ### Observations  
 
 An interesting phenomenon emerged during training: while using the target font, the model occasionally generated more "logically correct" variations of the content image based on the style images (italic, serifs):
 
-![better-results](/results/better-results.jpg "Better Results")
+![better-results](/images/better-results.jpg "Better Results")
 
 While the model cannot fully generate a complete font in another language, it can serve as a valuable reference for font creation.  
 

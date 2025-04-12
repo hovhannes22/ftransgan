@@ -19,3 +19,12 @@ class Generator(nn.Module):
         content_encoded = self.content_encoder(content_image) # (B, base_channels*4, H, W)
         image = self.decoder(style_encoded, content_encoded) # (B, 1, 64, 64)
         return image
+    
+    @torch.inference_mode()
+    def infer(self, style_images, content_image):
+        # style_images: (B, K, 1, 64, 64)
+        # content_image: (B, 1, 64, 64)
+        self.eval()  # Ensure that layers like dropout and BN behave in evaluation mode.
+        generated_image = self.forward(style_images, content_image)
+        self.train()  # Back to train mode.
+        return generated_image

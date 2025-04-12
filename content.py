@@ -15,7 +15,7 @@ class ContentEncoder(nn.Module):
         
     def forward(self, content_image):
         # content_image: (B, 1, 64, 64)
-        content_image = torch.relu(self.bn1(self.conv1(content_image))) # (B, base_channels, H', W')
-        content_image = torch.relu(self.bn2(self.conv2(content_image))) # (B, base_channels*2, H', W')
-        content_image = torch.relu(self.bn3(self.conv3(content_image))) # (B, base_channels*4, H', W')
-        return content_image
+        content_features = torch.relu(self.bn1(self.conv1(content_image))) # (B, base_channels, H', W')
+        content_features = torch.relu(self.bn2(self.conv2(content_features))) # (B, base_channels*2, H', W')
+        content_features = torch.relu(self.bn3(self.conv3(content_features))) # (B, base_channels*4, H', W')
+        return content_features
