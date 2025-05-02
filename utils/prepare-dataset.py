@@ -1,8 +1,6 @@
 import os
 import string
-from PIL import Image, ImageDraw, ImageFont
-from multiprocessing import Pool, cpu_count
-import functools
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 from tqdm import tqdm
 
 # ------------------------------
@@ -138,8 +136,6 @@ def check_font_support(font_path, chars, test_size=50):
             return False
 
     return all(renders_properly(c) for c in chars)
-
-from PIL import ImageChops, ImageOps
 
 def is_similar_to_missing_glyph(img, font_path, image_size, padding, cache={}):
     """
