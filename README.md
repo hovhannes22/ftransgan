@@ -30,37 +30,38 @@ However, this approach is not without limitations. Certain Armenian letters, suc
 ### Structure
 The overall project structure is the following:
 ```
-ftransgan/								# Root folder
-├── fonts/ 								# Data folder
-│   ├── base/ 							# Letter images for style reference
+ftransgan/
+├── fonts/
+│   ├── base/                   # Style reference letter images
 │   │   ├── Arial/
 │   │   │   ├── 0.png
 │   │   │   ├── 1.png
 │   │   │   └── ...
 │   │   └── ...
-│   ├── content/ 						# Letter images for content and target reference
+│   ├── content/                # Content/target letter images
 │   │   ├── Arial/
 │   │   │   └── ...
 │   │   └── ...
-│   ├── test/ 							# Letter images for unseen style reference
+│   ├── test/                   # Unseen style reference images
 │   │   ├── Times New Roman/
 │   │   │   └── ...
 │   │   └── ...
 │   ├── outputs/
-│   │   ├── checkpoints/				# Dir for saving the checkpoints during training
-│   │   ├── samples/ 					# Dir for sampling during training
-│   │   ├── loss/ 						# Dir for monitoring loss during training
-│   │   └── test/						# Dir for monitoring the model's performance on test fonts during training
-│   ├── input/ 							# Folder for train font files
-│   ├── input-test/ 					# Folder for test font files
+│   │   ├── checkpoints/        # Training checkpoints
+│   │   ├── samples/            # Training samples
+│   │   ├── loss/               # Training loss logs
+│   │   └── test/               # Test results during training
+│   ├── input/                  # Training font files
+│   ├── input-test/             # Test font files
 │   └── utils/
-│       ├── utils.py 					# Util functions for training and monitoring
-│       └── prepare-dataset.py 			# Script for generating dataset in fonts/
-├── config.py 							# Parameters and configuration file
-├── models.py							# Defined model classes
-├── dataset.py 							# Dataloader class
-└── train.py 							# Training loop
+│       ├── utils.py            # Utility functions
+│       └── prepare-dataset.py  # Dataset generation script
+├── config.py                   # Configuration and hyperparameters
+├── models.py                   # Model definitions
+├── dataset.py                  # Dataset class
+└── train.py                    # Training script
 ```
+
 
 - `base` – Contains images of letters from the source language (i.e., the language whose style will be transferred).  
 - `content` – Contains images of letters from the target language, styled in the transferred font.  
