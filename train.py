@@ -48,7 +48,7 @@ def train_model():
     generator, content_discriminator, style_discriminator, g_optimizer, d_optimizer = create_model()
     
     # Load if checkpoints available
-    start_epoch = load_checkpoint(generator, content_discriminator, style_discriminator, g_optimizer, d_optimizer) + 1
+    start_epoch = load_checkpoint(generator, content_discriminator, style_discriminator, g_optimizer, d_optimizer, dirs['checkpoints']) + 1
 
     # Create dataset
     dataset = FontDataset(K=num_samples)

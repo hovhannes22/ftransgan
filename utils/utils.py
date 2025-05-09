@@ -49,8 +49,8 @@ def save_checkpoint(generator, content_discriminator, style_discriminator, g_opt
         'epoch': epoch
     }, path)
 
-def load_checkpoint(generator, content_discriminator, style_discriminator, g_optimizer, d_optimizer, folder='checkpoints'):
-    folder = Path(folder)
+def load_checkpoint(generator, content_discriminator, style_discriminator, g_optimizer, d_optimizer, path='checkpoints'):
+    folder = Path(path)
     checkpoint_files = list(folder.glob("*.pth"))
     if not checkpoint_files:
         print("No checkpoint found.")
