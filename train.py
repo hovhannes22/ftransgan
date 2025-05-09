@@ -114,7 +114,7 @@ def train_model():
             g_content_loss = -content_discriminator(fake_content).mean()
             
             # Style loss
-            fake_style = torch.cat([generated_image, target_image], dim=1) # (B, K*C+1, 64, 64)
+            fake_style = torch.cat([generated_image, style_images[:, 0]], dim=1) # (B, K*C+1, 64, 64)
             g_style_loss = -style_discriminator(fake_style).mean()
             
             # L1 loss
